@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular Regular'), local('BebasNeueRegular'),
+        url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-display: swap;
+}
 * {
     box-sizing: border-box;
 }
@@ -33,7 +40,7 @@ body {
     color: #FFFFFF;
 }
 .navbar-contacts {
-    text-align: right;
+    text-align: right;/*выравнивание элемента по правому краю*/
 }
 .navbar-text {
     display: block;
@@ -43,9 +50,62 @@ body {
     line-height: 16px;      
 }
 .navbar-phone {
-    font-weight: 700;
-    font-size: 17px;
+    font-weight: 700;/*выставляем ширину элемента*/
+    font-size: 17px;/*выставляем размер шрифта*/
     line-height: 20px;
-    text-decoration: none;  
+    text-decoration: none;/*убираем подчеркивание у элемента*/
     color: #FFFFFF;
+}
+.main {
+    max-width: 1280px;
+    margin: auto;/*выставляем автоматический внутренный отступ*/
+    padding-top: 54px;
+    display: flex;
+}
+.home-image path {
+    opacity: 0;/*выставляем прозрачность у элемента*/
+    cursor: pointer;/*смена курсора на указатель при наведении*/
+}
+.home-image path:hover {
+    opacity: 1;/*выставляем прозрачность у псевдо-элемента*/
+}
+.main-info {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.counter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter-button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.main-title {
+    margin: 0px;
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 44px;  
+    color: #635854;
+}
+.counter {
+    font-family: 'Bebas Neue';
+    color:#635854;
+    font-size: 125px;
+    margin-top: 10px;
+}
+.button-primary {
+    background: #3596F5;
+    border-radius: 6px;
+    color: #FFFFFF;
+    border: none;
+    padding: 16px 36px;
+    cursor: pointer;
 }
